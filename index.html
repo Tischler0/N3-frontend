@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Cartão de Visitas Digital | Oscar Zimmermann</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Pequeno ajuste visual rápido para a foto de perfil ficar redonda e bonita */
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#sobre">Sobre Mim</a> | 
+            <a href="#consultas">Consultas Online</a> | 
+            <a href="#redes">Redes Sociais</a>
+        </nav>
+    </header>
+
+    <!-- REQUISITO ATUALIZADO: Apresentação completa estilo Cartão de Visitas -->
+    <section id="sobre">
+        <div class="profile-container">
+            <!-- DICA: Se você tiver uma foto sua no GitHub, pode colocar o link dela aqui! -->
+            <img src="https://github.com/Tischler0.png" alt="Foto de Oscar Augusto Zimmermann" class="profile-img">
+            <h1>Olá, eu sou o Oscar Augusto Zimmermann 👋</h1>
+            <p><strong>Acadêmico de Análise e Desenvolvimento de Sistemas</strong></p>
+            <p style="max-width: 600px; margin: 0 auto; color: #555;">
+                Seja bem-vindo ao meu cartão de visitas digital! Sou focado em desenvolvimento de sistemas, 
+                apaixonado por tecnologia e jogos de simulação. Atualmente, estou expandindo meus conhecimentos 
+                em engenharia de software e desenvolvimento frontend nesta aplicação.
+            </p>
+        </div>
+    </section>
+
+    <!-- REQUISITO: Integração com 3 rotas da BrasilAPI -->
+    <section id="consultas">
+        <h2>Serviços de Consulta (BrasilAPI)</h2>
+        
+        <!-- Rota 1: CEP -->
+        <div class="card">
+            <h3>1. Localizar Endereço por CEP</h3>
+            <input type="text" id="cepInput" placeholder="Digite o CEP (ex: 78550000)">
+            <button onclick="buscarCEP()">Buscar</button>
+            <div id="resultadoCep"></div>
+        </div>
+
+        <!-- Rota 2: Bancos -->
+        <div class="card">
+            <h3>2. Código dos Bancos</h3>
+            <button onclick="buscarBancos()">Listar Bancos</button>
+            <div id="resultadoBancos"></div>
+        </div>
+
+        <!-- Rota 3: Feriados -->
+        <div class="card">
+            <h3>3. Feriados Nacionais</h3>
+            <button onclick="buscarFeriados()">Ver Feriados de 2026</button>
+            <div id="resultadoFeriados"></div>
+        </div>
+    </section>
+
+    <!-- REQUISITO: Links das redes sociais -->
+    <section id="redes">
+        <h2>Minhas Redes Sociais</h2>
+        <a href="https://github.com/Tischler0" target="_blank">Meu GitHub</a> | 
+        <a href="https://www.instagram.com/zimmermannoscar/" target="_blank">Meu Instagram</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido para a UNIFASIPE</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
