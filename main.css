@@ -1,0 +1,151 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(30, 34, 37);
+    color: white;
+    font-family: 'Segoe UI';
+    margin: 0 auto;
+}
+
+#sessao-sobre{ 
+    background-color: rgb(40, 46, 51);
+}
+
+#sessao-api{
+    background-color: rgb(40, 46, 51);
+    padding: 60px 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color:green
+}
+
+header{
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(30, 34, 37);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    max-width: 1200px;   
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2{
+    font-size: 56px;
+    line-height: 60px;
+}
+
+.titulo-api{
+    font-size: 48px;
+}
+
+li{
+    display: inline;
+    margin: 20px;
+}
+
+.imgtopo{
+    width: 200px;
+    height: 60px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+section{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;   
+   padding: 60px 0;
+}
+
+.imgbody{
+    width: 350px;
+    height: 350px;
+}
+
+p{
+    line-height: 20px;
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+input{
+    border-radius: 15px;
+    border: none;
+    height: 20px;
+    padding: 5px;
+    color: black;
+}
+
+.btn-padrao{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(67, 160, 67);
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-enviar{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(67, 160, 67);
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+#btn-enviar:hover{
+    cursor: pointer;
+}
+
+footer{
+    background-color: rgb(40, 46, 51);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:780px) {
+   .container{
+    flex-direction: column;
+    text-align: center;
+   } 
+   .imgbody{
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+   }
+   .imgtopo{
+    display: none;
+   }
+   section{
+    flex-direction: column;
+   }
+}

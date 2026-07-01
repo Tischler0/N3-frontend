@@ -1,91 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Cartão de Visitas Digital | Oscar Zimmermann</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Pequeno ajuste visual rápido para a foto de perfil ficar redonda e bonita */
-        .profile-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #007bff;
-            margin-bottom: 15px;
-        }
-    </style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Trabalho N3 - Oscar Zimmermann</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
-
     <header>
-        <nav>
-            <a href="#sobre">Sobre Mim</a> | 
-            <a href="#consultas">Consultas Online</a> | 
-            <a href="#redes">Redes Sociais</a>
-        </nav>
+        <div class="container">
+            <div>
+                <img class="imgtopo" src="c:\Users\zimme\OneDrive\Imagens\Saved Pictures\images.jpg" style="object-fit: cover; border-radius: 50%; width: 50px; height: 50px;">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#sessao-principal">Cartão de Visita</a></li>
+                    <li><a href="#sessao-api">APIs</a></li>
+                </ul>
+            </div> 
+        </div>       
     </header>
 
-    <!-- REQUISITO ATUALIZADO: Apresentação completa estilo Cartão de Visitas -->
-    <section id="sobre">
-        <div class="profile-container">
-            <!-- DICA: Se você tiver uma foto sua no GitHub, pode colocar o link dela aqui! -->
-            <img src="https://github.com/Tischler0.png" alt="Foto de Oscar Augusto Zimmermann" class="profile-img">
-            <h1>Olá, eu sou o Oscar Augusto Zimmermann 👋</h1>
-            <p><strong>Acadêmico de Análise e Desenvolvimento de Sistemas</strong></p>
-            <p style="max-width: 600px; margin: 0 auto; color: #555;">
-                Seja bem-vindo ao meu cartão de visitas digital! Sou focado em desenvolvimento de sistemas, 
-                apaixonado por tecnologia e jogos de simulação. Atualmente, estou expandindo meus conhecimentos 
-                em engenharia de software e desenvolvimento frontend nesta aplicação.
-            </p>
+    <section id="sessao-principal" style="padding: 40px 0;">
+        <div class="container" style="justify-content: center;">
+            <div class="main" style="background-color: rgb(40, 46, 51); padding: 35px; border-radius: 15px; border: 1px solid #444; max-width: 600px; text-align: center; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <img class="imgbody" src="c:\Users\zimme\OneDrive\Imagens\Saved Pictures\f4d27af4-f656-464c-b539-609836175d0b.jpg" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid rgb(67, 160, 67); margin-bottom: 20px;">
+                
+                <h2>Oscar Augusto Zimmermann</h2>
+                <h4 style="color: rgb(67, 160, 67); margin-top: 5px;">Acadêmico de Análise e Desenvolvimento de Sistemas</h4>
+                
+                <p style="margin: 20px auto; color: #ccc;">
+                    Seja bem-vindo! Sou estudante do primeiro semestre de Análise e Desenvolvimento de Sistemas e estou construindo minha base na área de desenvolvimento de software. Tenho interesse em desenvolvimento web e busco aprimorar minhas habilidades criando projetos que me permitam aprender e evoluir constantemente.
+
+                </p>
+                
+                <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <input type="email" id="ed-email" placeholder="Teu e-mail" style="width: 200px;">
+                    <input type="button" value="Manda Ai" id="btn-enviar">
+                    <a href="https://wa.me/5566999429065" target="_blank"><button class="btn-padrao" style="background-color: #25D366; width: 130px; border: none; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; height: 30px;">Chama no Whats</button></a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- REQUISITO: Integração com 3 rotas da BrasilAPI -->
-    <section id="consultas">
-        <h2>Serviços de Consulta (BrasilAPI)</h2>
-        
-        <!-- Rota 1: CEP -->
-        <div class="card">
-            <h3>1. Localizar Endereço por CEP</h3>
-            <input type="text" id="cepInput" placeholder="Digite o CEP (ex: 78550000)">
-            <button onclick="buscarCEP()">Buscar</button>
-            <div id="resultadoCep"></div>
-        </div>
+    <section id="sessao-api">
+        <div class="container" style="flex-direction: column; align-items: flex-start;">
+            
+            <div class="main" style="width: 100%; margin-bottom: 25px;">
+                <h2 class="titulo-api">Consulta CEP</h2>   
+                <div style="margin-top: 10px;">
+                    <input type="text" id="inputCEP" placeholder="Digite o CEP (Ex: 78550000)">
+                    <button class="btn-padrao" id="btn-CEP">Consultar</button>
+                    <div id="respostaCEP" style="margin-top: 15px; background: rgb(30, 34, 37); padding: 10px; border-radius: 10px;"></div>
+                </div>        
+            </div>
 
-        <!-- Rota 2: Bancos -->
-        <div class="card">
-            <h3>2. Código dos Bancos</h3>
-            <button onclick="buscarBancos()">Listar Bancos</button>
-            <div id="resultadoBancos"></div>
-        </div>
+            <div class="main" style="width: 100%; margin-bottom: 25px;">
+                <h2 class="titulo-api">Consulta CNPJ</h2>   
+                <div style="margin-top: 10px;">
+                    <input type="text" id="inputCNPJ" placeholder="Digite o CNPJ">
+                    <button class="btn-padrao" id="btn-CNPJ">Consultar</button>
+                    <div id="respostaCNPJ" style="margin-top: 15px; background: rgb(30, 34, 37); padding: 10px; border-radius: 10px;"></div>
+                </div>                           
+            </div>
 
-        <!-- Rota 3: Feriados -->
-        <div class="card">
-            <h3>3. Feriados Nacionais</h3>
-            <button onclick="buscarFeriados()">Ver Feriados de 2026</button>
-            <div id="resultadoFeriados"></div>
+            <div class="main" style="width: 100%;">
+                <h2 class="titulo-api">Consulta Clima</h2>  
+                <div style="margin-top: 10px;">
+                    <input type="text" id="inputClima" placeholder="Digite o código ICAO (Ex: SBMT)">
+                    <button class="btn-padrao" id="btn-Clime">Consultar</button>
+                    <div id="respostaClima" style="margin-top: 15px; background: rgb(30, 34, 37); padding: 10px; border-radius: 10px;"></div>
+                </div>                                           
+            </div>                        
         </div>
-    </section>
-
-    <!-- REQUISITO: Links das redes sociais -->
-    <section id="redes">
-        <h2>Minhas Redes Sociais</h2>
-        <a href="https://github.com/Tischler0" target="_blank">Meu GitHub</a> | 
-        <a href="https://www.instagram.com/zimmermannoscar/" target="_blank">Meu Instagram</a>
-    </section>
+    </section>    
 
     <footer>
-        <p>&copy; 2026 - Desenvolvido para a UNIFASIPE</p>
+        <span>Desenvolvido por: <strong>Oscar Augusto Zimmermann</strong> | 
+            <a href="https://github.com/Tischler0" target="_blank" style="color: rgb(67, 160, 67); font-weight: bold;">GitHub</a> | 
+            <a href="https://www.instagram.com/zimmermannoscar/" target="_blank" style="color: rgb(67, 160, 67); font-weight: bold;">Instagram</a> | 
+            <a href="https://wa.me/5566999429065" target="_blank" style="color: rgb(67, 160, 67); font-weight: bold;">WhatsApp</a>
+        </span>
     </footer>
-
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
